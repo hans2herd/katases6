@@ -120,7 +120,7 @@ describe('`Reflect.apply` calls a target function', function() {
           name() { return bob._name; }
         }
         const bob = new Bob();
-        const scope = Bob;
+        const scope = bob;
         assert.equal(Reflect.apply(bob.name, scope, []), 'Bob');
       });
     });
