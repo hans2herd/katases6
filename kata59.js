@@ -117,7 +117,7 @@ describe('`Reflect.apply` calls a target function', function() {
       it('pass in the `this` that the function to call needs', () => {
         class Bob {
           constructor() { this._name = 'Bob'; }
-          name() { return bob._name; }
+          name() { return this._name; }
         }
         const bob = new Bob();
         const scope = bob;
