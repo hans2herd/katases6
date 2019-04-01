@@ -111,7 +111,7 @@ describe('`Reflect.apply` calls a target function', function() {
         assert.equal(Reflect.apply(fn, void 0, []), 'the return value');
       });
       it('call a function on an array', () => {
-        const fn = () => [23, 42];
+        const fn = [].splice;
         assert.deepEqual(Reflect.apply(fn, [0, 23, 42], [1]), [23, 42]);
       });
       it('pass in the `this` that the function to call needs', () => {
