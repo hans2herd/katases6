@@ -66,7 +66,7 @@ describe('`Reflect.getPrototypeOf` returns the prototype', function() {
     });
     it('an array has a prototype too', function() {
       let arr = [];
-      const expectedProto = Reflect.getPrototypeOf(arr);
+      const expectedProto = Array.prototype
       assert.equal(Reflect.getPrototypeOf(arr), expectedProto);
     });
   });
