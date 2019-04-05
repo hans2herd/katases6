@@ -95,8 +95,8 @@ describe('An object literal can also contain setters', () => {
         const publicPropertyName = 'x';
         const privatePropertyName = '_' + publicPropertyName;
         const obj = {
-          [privatePropertyName]: 'axe',
-          
+          [privatePropertyName]: null,
+          set [publicPropertyName](x) {this[privatePropertyName] = x}
           // write the complete setter to make the assert below pass :)
         };
         obj.x = 'axe';
