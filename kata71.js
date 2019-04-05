@@ -141,7 +141,7 @@ describe('`str.repeat(x)` concatenates `x` copies of `str` and returns it', func
             return counter++;
           }
         }
-        let repeated = toString(new X().repeat());
+        let repeated = String(new X()).repeat();
         assert.equal(repeated, '11');
       });
     });
