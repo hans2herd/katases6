@@ -94,8 +94,8 @@ describe('chaining multiple promises can enhance readability', () => {
       });
       const appendPeriod = string => `${string}.`;
       it('multiple `then()`s can be chained', function() {
-        const wordsPromise = Promise.resolve('Sentence without       an end');
-        wordsPromise
+        const wordsPromise = Promise.resolve('Sentence without       an end.');
+        return wordsPromise
           .then(removeMultipleSpaces)
           .then(actual => {assert.equal(actual, 'Sentence without an end.')})
         ;
